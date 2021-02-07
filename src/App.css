@@ -17,3 +17,11 @@
   border-bottom: 2px dashed white;
   border-top: 2px dashed white;
 }
+
+.meme-ex {
+  display: inline-block;
+  height: 450px;
+  padding-right: 300px;
+  padding-top: 130px;
+  transform: rotate(15deg);
+}
