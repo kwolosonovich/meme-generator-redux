@@ -8,8 +8,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 
 function App() {
+  const memes = useSelector((state) => state.memes);
 
-  
+
   return (
     <div className="App">
       <header className="header">Meme Generator</header>
@@ -18,7 +19,7 @@ function App() {
         <img src={example} alt="meme" class="meme-ex" />
       </div>
       <CreateForm />
-      <MemeList />
+      <MemeList memes={memes} />
     </div>
   );
 }
