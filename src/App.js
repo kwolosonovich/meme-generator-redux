@@ -2,9 +2,14 @@ import React from "react";
 import CreateForm from "./CreateForm"
 import MemeList from "./MemeList"
 import example from "./example.jpg"
+import Meme from "./Meme"
 import "./App.css";
+import { useSelector, useDispatch } from "react-redux";
+
 
 function App() {
+
+  
   return (
     <div className="App">
       <header className="header">Meme Generator</header>
