@@ -7,17 +7,13 @@
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  /* min-height: 100vh; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+.header {
+  position: relative;
+  text-align: right;
+  background-color: #2b9497;
+  margin: 0;
+  color: #f1fcfc;
+  padding: 4rem 5rem .5rem;
+  border-bottom: 2px dashed white;
+  border-top: 2px dashed white;
 }

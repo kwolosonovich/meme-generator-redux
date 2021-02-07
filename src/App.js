@@ -1,12 +1,12 @@
 import React from "react";
 import CreateForm from "./CreateForm"
-import './App.css';
 import MemeList from "./MemeList"
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="header">
         Meme Generator
       </header>
       <CreateForm/>
