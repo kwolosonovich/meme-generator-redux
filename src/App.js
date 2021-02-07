@@ -1,6 +1,7 @@
 import React from "react";
 import CreateForm from "./CreateForm"
 import './App.css';
+import MemeList from "./MemeList"
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         Meme Generator
       </header>
       <CreateForm/>
+      <MemeList />
     </div>
   );
 }
