@@ -3,7 +3,7 @@ const DEFAULT_STATE = {
 };
 
 function rootReducer(state = DEFAULT_STATE, action) {
-  if (action.type === "ADD_MEME") {
+  if (action.type === "NEW_MEME") {
     return {
       ...state,
       memes: [...state.memes, { ...action.meme }],

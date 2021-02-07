@@ -3,10 +3,11 @@ import Meme from "./Meme"
 
 function MemeList(Memes) {
 
+
 	return (
     <div id="gallery">
       <h3>Gallery</h3>
-      <div class="row" id="memes">
+      <div className="row" id="memes">
         {Memes.map((meme) => (
           <Meme
             key={meme.id}
