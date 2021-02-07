@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import React from "react";
+import CreateForm from "./CreateForm"
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <header className="App-header">
         Meme Generator
       </header>
+      <CreateForm/>
     </div>
   );
 }
