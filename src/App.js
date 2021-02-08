@@ -2,7 +2,6 @@ import React from "react";
 import CreateForm from "./CreateForm"
 import example from "./example.jpg"
 import Meme from "./Meme"
-import rootReducer from "./rootReducer"
 import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -17,12 +16,17 @@ function App() {
       topText={m.topText}
       bottomText={m.bottomText}
       url={m.url}
+      deleteMeme={() => deleteMeme(m.id)}
     />
   ));
 
-  function newMeme(newMeme) {
-    dispatch({ type: "NEW_MEME", meme: newMeme });
+  function addMeme(newMeme) {
+    dispatch({ type: "ADD_MEME", meme: newMeme });
   }
+
+   function deleteMeme(id) {
+     dispatch({ type: "REMOVE_MEME", id });
+   }
   
   return (
     <div className="App">
@@ -31,8 +35,8 @@ function App() {
         <h3 className="slogan">Upload. Create. Share.</h3>
         <img src={example} alt="meme" className="meme-ex" />
       </div>
-      <CreateForm newMeme={newMeme} />
-      {showMemes}
+      <CreateForm addMeme={addMeme} />
+      <span id="gallery">{showMemes}</span>
     </div>
   );
 }

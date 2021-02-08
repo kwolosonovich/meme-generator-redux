@@ -9,12 +9,12 @@ const DEFAULT_FORM = {
   bottomText: "",
 };
 
-function CreateForm({ newMeme }) {
+function CreateForm({ addMeme }) {
   const [form, setForm] = useState(DEFAULT_FORM);
 
   function handleSubmit(e) {
     e.preventDefault();
-    newMeme({ ...form, id: uuidv4() });
+    addMeme({ ...form, id: uuidv4() });
     setForm(DEFAULT_FORM);
   }
 
@@ -34,8 +34,7 @@ function CreateForm({ newMeme }) {
             onChange={handleChange}
             type="text"
             id="file-id"
-            name="file"
-            id="add-photo"
+            name="url"
             placeholder="Image URL"
           ></input>
         </div>
@@ -46,7 +45,7 @@ function CreateForm({ newMeme }) {
             value={form.topText}
             onChange={handleChange}
             type="text"
-            name="text-field"
+            name="topText"
             id="text-input-top"
             cols="35"
             rows="2"
@@ -57,7 +56,7 @@ function CreateForm({ newMeme }) {
             onChange={handleChange}
             value={form.bottomText}
             type="text"
-            name="text-field"
+            name="bottomText"
             id="text-input-bottom"
             cols="35"
             rows="2"

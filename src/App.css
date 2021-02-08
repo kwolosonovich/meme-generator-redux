@@ -25,3 +25,11 @@
   padding-top: 130px;
   transform: rotate(15deg);
 }
+
+#gallery {
+  padding-top: 60px;
+  background-color: #f1fcfc;
+  color: #2b9497;
+  position: relative;
+  bottom: 0;
+}
