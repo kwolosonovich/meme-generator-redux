@@ -9,6 +9,12 @@ function rootReducer(state = DEFAULT_STATE, action) {
       memes: [...state.memes, { ...action.meme }],
     };
   }
+  if (action.type === "REMOVE_MEME") {
+    return {
+      ...state,
+      memes: state.memes.filter((meme) => meme.id !== action.id),
+    };
+  }
   return state;
 }
 
